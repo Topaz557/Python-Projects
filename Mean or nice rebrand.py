@@ -17,7 +17,7 @@ def describe_game(name):
     else:
         stop = True
         while stop:
-         if name != "":
+         if name == "":
             name = input("\nWhat is your name? \n>>> ").capitalize()
             if name !="":
                print("\nWelcome, {}!".format(name))
