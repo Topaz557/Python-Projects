@@ -11,12 +11,8 @@ with conn:
         col_lname TEXT, \
         col_email TEXT  \
         )")
-    conn.commit()
-conn.close()
+     conn.commit()
 
-
-
-conn = sqlite3.connect('test2.db')
 
 with conn:
     cur = conn.cursor()
