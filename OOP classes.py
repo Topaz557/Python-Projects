@@ -23,9 +23,10 @@ class Human(Organism):
     origin = "Earth"
     inteligence = 100
   # assinged a attribute inguinuity, gave it a message
-    def ingenuity(self):
-        msg = "\nCreates a deadly weapon using only a paper clip, chewing gum, and a roll of duct tape!"
-        return msg
+    def information(self):
+        msg ="\nName: {}\nSpecies: {}\nLegs: {}\nArms: {}\nDNA {}\nOrigin: \nCarbon Based: {}".format(self.name, self.species, self.legs, self.arms, self.dna, self.origin, self.carbon_based)
+        msg2 ="\nCreates a deadly weapon using only a paper clip, chewing gum, and a roll of duct tape!"
+        return msg + msg2
 
 #another child class instance
 class Dog(Organism):
@@ -37,9 +38,10 @@ class Dog(Organism):
     origin = "Earth"
     noise = "bark"
 # assinged attribute bite
-    def bite(self):
-        msg = "/n Emits a loud, menacing growl and bites down fiercly on its prey!"
-        return msg
+    def information(self):
+        msg ="\nName: {}\nSpecies: {}\nLegs: {}\nArms: {}\nDNA {}\nOrigin: \nCarbon Based: {}".format(self.name, self.species, self.legs, self.arms, self.dna, self.origin, self.carbon_based)
+        msg2 = "\nEmits a loud, menacing growl and bites down fiercly on its prey!"
+        return msg + msg2
 
 class Bacterium(Organism):
     name = "K"
@@ -50,9 +52,10 @@ class Bacterium(Organism):
     origin = "Mars"
     size = "Microscopic"
 #assinged attribute replication
-    def replication(self):
-        msg = "\nThe cells begin to divide and mulitply into two seperate organisms!"
-        return msg
+    def information(self):
+        msg ="\nName: {}\nSpecies: {}\nLegs: {}\nArms: {}\nDNA {}\nOrigin: \nCarbon Based: {}".format(self.name, self.species, self.legs, self.arms, self.dna, self.origin, self.carbon_based)
+        msg2 = "\nThe cells begin to divide and mulitply into two seperate organisms!"
+        return msg + msg2
 
     
 
@@ -60,14 +63,14 @@ class Bacterium(Organism):
 if __name__ == "__main__":
         human = Human()
         print(human.information())
-        print(human.ingenuity())
+        
 
         dog = Dog()
         print(dog.information())
-        print(dog.bite())
+      
 
         bacteria = Bacterium()
         print(bacteria.information())
-        print(bacteria.replication())
+    
 
         
