@@ -3,7 +3,7 @@
 #
 # Python Ver:   3.5.1
 #
-# Author:       Daniel A. Christie
+# Author:       Andrew weber
 #
 # Purpose:      Phonebook Demo. Demonstrating OOP, Tkinter GUI module,
 #               using Tkinter Parent and Child relationships.
