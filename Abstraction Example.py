@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod # here we are importing the ABC module
 
 #assign classes
 class Car(ABC): # Here we are creaing the first abstract class that ||| will work as a parent class||??
+    @abstractmethod
     def mileage(self):
         pass # this allows us to make classes that inherit the method, however it redines what the method does.
 
