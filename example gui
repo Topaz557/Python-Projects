@@ -1,0 +1,29 @@
+import tkinter
+from tkinter import *
+
+class ParentWindow(Frame):
+    def __init__(self, master, *args, **kwargs):
+        Frame.__init__(self, master, *args, **kwargs)
+
+        #define our master frame config
+        self.master = master
+        self.master.minsize(500,300) # Height is first, width second
+        self.master.maxsize(500,300)
+        # This centerwindow method will center our app on the user's screen
+        phoneBookFunc.center_window(self,500,300)
+        self.master.title("The Tkinter Phonebook Demo")
+        self.master.configure(bg="#F0F0F0")
+        # this protocol method is a tkinter built-in method to catch if
+        # the user clicks the upper corner "X" on windows os
+        self.master.protocol("WM_DELETE_WINDOW", lambda: phoneBookFunc.ask_quit(self))
+        arg = self.master
+
+        # load in the GUI widgets from a seperate module,
+        #keeping your code comparmentalized and clutter free!
+        phoneBookGUI.load_gui(self)
+
+        #instantiate the tkinter menu dropdown object
+        # This is the menu that will appear
+        #menubar = Menu(self.master)
+        #filemenu = Menu(menubar, tearoff=0)
+        #filemenu.add_seperator()

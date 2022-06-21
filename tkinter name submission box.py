@@ -3,6 +3,10 @@ from tkinter import *
 from tkinter import messagebox
 
 
+class ParentWindow(Frame):
+    def __init__(self, master, *args, **kwargs):
+        Frame.__init__(self, master, *args, **kwargs)
+
         self.lblFName = Label(self.master, text='First Name', font=("Helvetica", 16),fg='black', bg='lightgray')
         self.lblFName.grid(row=0, column=0, padx=(27,0), pady=(10,0), sticky=N+W)
 
