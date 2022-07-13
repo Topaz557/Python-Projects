@@ -17,3 +17,6 @@ class UniversityCampus(models.Model):
         display_course = '{0.CampusName}: {0.State}'
         return display_course.format(self)
 
+  #removes added 's' that django adds to the model name in the browser display
+    class Meta:
+        verbose_name_plural = "University Campuses"
