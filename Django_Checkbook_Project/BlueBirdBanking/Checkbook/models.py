@@ -12,7 +12,7 @@ class Account(models.Model):
 
     # allows references to a specific account to be returned as the owners name not the primary key
     def __str__(self):
-        return self.first_name + '' + self.last_name
+        return self.first_name + ' ' + self.last_name
 
 
 TransactionTypes = [('Deposit', 'Deposit'), ('Withdrawal', 'Withdrawal')]
@@ -20,7 +20,7 @@ TransactionTypes = [('Deposit', 'Deposit'), ('Withdrawal', 'Withdrawal')]
 
 #creates transaction model
 class Transaction(models.Model):
-    data = models.DateField()
+    date = models.DateField()
     type = models.CharField(max_length=10, choices=TransactionTypes)
     amount = models.DecimalField(max_digits=15, decimal_places=2)
     description = models.CharField(max_length=100)
